@@ -27,6 +27,7 @@ export default function SelectedContact({
       getAPIDataAxios();
     }
   }, [selectedContactId]);
+    
   return (
     <>
       <UserProfile contact={contact} />
@@ -61,39 +62,31 @@ const UserProfile = ({ contact }) => {
           </a>
         </p>
           </div>
-          {/* <div>
-              <h3>Address</h3>
-              <p>{contact.address}</p>
-          </div>
-          <div>
-              <h3>Company</h3>
-              <p>{contact.company}</p>
-          </div> */}
-      {/* <div className="address">
+      <div className="address">
         <h3>Address</h3>
         <p>
-          {contact.address.street}, {contact.address.suite}
+          {contact?.address?.street}, {contact?.address?.suite}
         </p>
         <p>
-          {contact.address.city}, {contact.address.zipcode}
+          {contact?.address?.city}, {contact?.address?.zipcode}
         </p>
         <p>
-          <strong>Geo:</strong> Lat: {contact.address.geo.lat}, Lng:{" "}
-          {contact.address.geo.lng}
+          <strong>Geo:</strong> Lat: {contact?.address?.geo.lat}, Lng:{" "}
+          {contact?.address?.geo.lng}
         </p>
       </div>
       <div className="company">
         <h3>Company</h3>
         <p>
-          <strong>Name:</strong> {contact.company.name}
+          <strong>Name:</strong> {contact?.company?.name}
         </p>
         <p>
-          <strong>Catch Phrase:</strong> {contact.company.catchPhrase}
+          <strong>Catch Phrase:</strong> {contact?.company?.catchPhrase}
         </p>
         <p>
-          <strong>BS:</strong> {contact.company.bs}
+          <strong>BS:</strong> {contact?.company?.bs}
         </p>
-      </div> */}
+      </div>
     </div>
   );
 };
