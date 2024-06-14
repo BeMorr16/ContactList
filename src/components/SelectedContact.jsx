@@ -56,7 +56,7 @@ const UserProfile = ({ contact }) => {
           <a
             href={`http://${contact.website}`}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="no opener no referrer"
           >
             {contact.website}
           </a>
